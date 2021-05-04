@@ -1,17 +1,19 @@
-import React, {useContext} from 'react';
-import {Button as StyledButton} from './styles';
-import {ThemeContext} from 'styled-components';
+import React from 'react';
+import {Wrapper, Label} from './styles';
 
-export const Button = ({toggleTheme}) => {
-  const {colors, title} = useContext(ThemeContext);
+const Button = ({
+  theme,
+  label,
+  color,
+  disabled,
+  onPress,
+  navigation,
+  ...props
+}) => {
   return (
-    <StyledButton
-      onValueChange={toggleTheme}
-      value={title === 'dark'}
-      trackColor={{false: '#767577', true: '#000'}}
-      thumbColor={toggleTheme ? '#f5dd4b' : '#f4f3f4'}
-      ios_backgroundColor="#3e3e3e"
-    />
+    <Wrapper {...props}>
+      <Label>{label}</Label>
+    </Wrapper>
   );
 };
 

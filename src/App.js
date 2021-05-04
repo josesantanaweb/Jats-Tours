@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {ThemeProvider} from 'styled-components';
 import Button from './components/Button';
+import Switch from './components/Switch';
 import Container from './components/Container';
 import Title from './components/Title';
 import themes from './theme';
@@ -15,8 +16,9 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <Button toggleTheme={toggleTheme} />
-        <Title>dawdawd</Title>
+        <Switch toggleTheme={toggleTheme} />
+        <Title>titulo</Title>
+        <Button label="Hecho" />
       </Container>
     </ThemeProvider>
   );
