@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {ThemeProvider} from 'styled-components';
-import Switch from './components/Switch';
+// import Switch from './components/Switch';
 import Providers from './navigation';
 import themes from './theme';
 
@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Switch toggleTheme={toggleTheme} />
+      {/* <Switch toggleTheme={toggleTheme} /> */}
       <Providers />
     </ThemeProvider>
   );

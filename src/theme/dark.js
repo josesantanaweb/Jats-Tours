@@ -9,7 +9,7 @@ export default {
     warning: '#FF9C09',
     success: '#38C172',
     white: '#FFFFFF',
-    black: '#000000',
+    black: '#050812',
     graylight: '#DDF4FF',
     graydark: '#CCCCCC',
     gray: '#9AB4C1',

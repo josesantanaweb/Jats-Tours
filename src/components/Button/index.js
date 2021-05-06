@@ -1,17 +1,9 @@
 import React from 'react';
 import {Wrapper, Label} from './styles';
 
-const Button = ({
-  theme,
-  label,
-  color,
-  disabled,
-  onPress,
-  navigation,
-  ...props
-}) => {
+const Button = ({label, color, disabled, onPress, navigation, ...props}) => {
   return (
-    <Wrapper {...props}>
+    <Wrapper color={color} disabled={disabled} {...props}>
       <Label>{label}</Label>
     </Wrapper>
   );

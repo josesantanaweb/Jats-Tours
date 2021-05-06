@@ -1,11 +1,15 @@
 import React from 'react';
-import Title from '../../components/Title';
+import {TouchableOpacity} from 'react-native';
+import Text from '../../components/Text';
 import Container from '../../components/Container';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   return (
     <Container>
-      <Title>HomeScreen</Title>
+      <Text>HomeScreen</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+        <Text>LoginScreen</Text>
+      </TouchableOpacity>
     </Container>
   );
 };
