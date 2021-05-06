@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Container as StyledContainer} from './styles';
 
 const Container = ({children, color}) => {
@@ -14,6 +15,11 @@ const Container = ({children, color}) => {
       {children}
     </StyledContainer>
   );
+};
+
+Container.propTypes = {
+  color: PropTypes.string,
+  children: PropTypes.element.isRequired,
 };
 
 export default Container;

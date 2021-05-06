@@ -27,7 +27,11 @@ const LoginScreen = ({navigation}) => {
         <Input placeholder="Ingrese su numero contraseña" label="Contraseña" />
       </View>
       <S.Footer>
-        <Button label="Inicia Sesion" color="primary" />
+        <Button
+          label="Inicia Sesion"
+          color="primary"
+          onPress={() => navigation.navigate('Register')}
+        />
         <S.FooterText>
           <Text size="medium">¿No tienes una cuenta?</Text>
           <View style={{marginLeft: 10}}>

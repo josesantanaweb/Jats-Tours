@@ -32,7 +32,11 @@ const RegisterScreen = ({navigation}) => {
         <Input placeholder="Ingrese su numero contraseña" label="Contraseña" />
       </View>
       <S.Footer>
-        <Button label="Registro" color="primary" />
+        <Button
+          label="Registro"
+          color="primary"
+          onPress={() => navigation.navigate('Login')}
+        />
         <S.FooterText>
           <Text size="medium">¿Ya tienes una cuenta?</Text>
           <View style={{marginLeft: 10}}>
