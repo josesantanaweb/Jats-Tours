@@ -14,7 +14,10 @@ export const Wrapper = styled.TouchableOpacity`
 `;
 
 export const Label = styled.Text`
-  color: ${props => props.theme.colors.white};
+  color: ${props =>
+    props.color === 'white'
+      ? props.theme.colors.primary
+      : props.theme.colors.white};
   font-family: 'Roboto-Medium';
   font-size: 16px;
   text-transform: uppercase;

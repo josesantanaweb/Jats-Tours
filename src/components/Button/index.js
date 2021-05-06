@@ -3,8 +3,8 @@ import {Wrapper, Label} from './styles';
 
 const Button = ({label, color, disabled, onPress, navigation, ...props}) => {
   return (
-    <Wrapper color={color} disabled={disabled} {...props}>
-      <Label>{label}</Label>
+    <Wrapper onPress={onPress} color={color} disabled={disabled} {...props}>
+      <Label color={color}>{label}</Label>
     </Wrapper>
   );
 };

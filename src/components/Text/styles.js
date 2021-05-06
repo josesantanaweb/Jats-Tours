@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Text = styled.Text`
+  text-align: ${props => (props.align === 'center' ? 'center' : 'left')};
   font-family: ${props =>
     props.weight === 'bold' ? 'Roboto-Medium' : 'Roboto-Regular'};
   color: ${props =>
@@ -15,6 +16,8 @@ export const Text = styled.Text`
       : props.size === 'medium'
       ? '18px'
       : props.size === 'large'
+      ? '24px'
+      : props.size === 'xlarge'
       ? '36px'
       : '16px'};
 `;

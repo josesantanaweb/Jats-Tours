@@ -7,6 +7,9 @@ const HomeScreen = ({navigation}) => {
   return (
     <Container>
       <Text>HomeScreen</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Send')}>
+        <Text>Send</Text>
+      </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate('Login')}>
         <Text>LoginScreen</Text>
       </TouchableOpacity>

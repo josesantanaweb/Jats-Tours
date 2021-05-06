@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {Switch as StyledSwitch} from './styles';
 import {ThemeContext} from 'styled-components';
 
-export const Switch = ({toggleTheme}) => {
+const Switch = ({toggleTheme}) => {
   const {title} = useContext(ThemeContext);
   return (
     <StyledSwitch

@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {ThemeContext} from 'styled-components';
 import * as S from './styles';
 
-export const Input = ({label, value, placeholder, ...props}) => {
+const Input = ({label, value, placeholder, ...props}) => {
   const {colors} = useContext(ThemeContext);
   return (
     <S.Wrapper>

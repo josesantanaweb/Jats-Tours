@@ -5,7 +5,7 @@ export const Container = styled.ScrollView`
   padding-left: 30px;
   padding-right: 30px;
   background-color: ${props =>
-    props.theme.title === 'light'
-      ? props.theme.colors.white
-      : props.theme.colors.black};
+    props.color === 'primary'
+      ? props.theme.colors.primary
+      : props.theme.colors.white};
 `;
