@@ -10,6 +10,8 @@ export const Text = styled.Text`
       : props.color === 'white'
       ? props.theme.colors.white
       : props.theme.colors.gray};
+  text-transform: ${props =>
+    props.uppercase === 'uppercase' ? 'uppercase' : 'capitalize'};
   font-size: ${props =>
     props.size === 'small'
       ? '14px'

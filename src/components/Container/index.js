@@ -19,7 +19,7 @@ const Container = ({children, color}) => {
 
 Container.propTypes = {
   color: PropTypes.string,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Container;

@@ -8,10 +8,10 @@ import Link from '../../components/Link';
 
 import * as S from './styles';
 
-const RegisterScreen = ({navigation}) => {
+const Register = ({navigation}) => {
   return (
     <Container>
-      <View>
+      <S.Content>
         <S.Header>
           <S.Logo source={require('../../assets/img/logo.png')} />
         </S.Header>
@@ -30,7 +30,7 @@ const RegisterScreen = ({navigation}) => {
         />
         <Input placeholder="Ingrese su numero telefono" label="Telefono" />
         <Input placeholder="Ingrese su numero contraseña" label="Contraseña" />
-      </View>
+      </S.Content>
       <S.Footer>
         <Button
           label="Registro"
@@ -38,12 +38,11 @@ const RegisterScreen = ({navigation}) => {
           onPress={() => navigation.navigate('Login')}
         />
         <S.FooterText>
-          <Text size="medium">¿Ya tienes una cuenta?</Text>
+          <Text>¿Ya tienes una cuenta?</Text>
           <View style={{marginLeft: 10}}>
             <Link
-              size="medium"
               label="Inicia Sesión"
-              onPress={() => navigation.navigate('Login')}
+              onPress={() => navigation.navigate('Onboarding')}
             />
           </View>
         </S.FooterText>
@@ -52,4 +51,4 @@ const RegisterScreen = ({navigation}) => {
   );
 };
 
-export default RegisterScreen;
+export default Register;

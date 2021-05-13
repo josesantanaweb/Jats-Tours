@@ -13,10 +13,19 @@ export const Top = styled.View`
   margin-bottom: 30px;
 `;
 
-export const Footer = styled.View``;
+export const Content = styled.View`
+  margin-left: 20px;
+  margin-right: 20px;
+`;
+
+export const Footer = styled.View`
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+`;
 
 export const FooterText = styled.View`
   flex-direction: row;
+  justify-content: center;
   padding-top: 20px;
-  padding-bottom: 30px;
 `;

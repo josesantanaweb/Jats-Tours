@@ -8,10 +8,10 @@ import Link from '../../components/Link';
 
 import * as S from './styles';
 
-const LoginScreen = ({navigation}) => {
+const Login = ({navigation}) => {
   return (
     <Container>
-      <View>
+      <S.Content>
         <S.Header>
           <S.Logo source={require('../../assets/img/logo.png')} />
         </S.Header>
@@ -25,20 +25,19 @@ const LoginScreen = ({navigation}) => {
           label="Correo Electronico"
         />
         <Input placeholder="Ingrese su numero contraseña" label="Contraseña" />
-      </View>
+      </S.Content>
       <S.Footer>
         <Button
           label="Inicia Sesion"
           color="primary"
-          onPress={() => navigation.navigate('Register')}
+          onPress={() => navigation.navigate('Home')}
         />
         <S.FooterText>
-          <Text size="medium">¿No tienes una cuenta?</Text>
+          <Text>¿No tienes una cuenta?</Text>
           <View style={{marginLeft: 10}}>
             <Link
-              size="medium"
               label="Registrate"
-              onPress={() => navigation.navigate('Register')}
+              onPress={() => navigation.navigate('Send')}
             />
           </View>
         </S.FooterText>
@@ -47,4 +46,4 @@ const LoginScreen = ({navigation}) => {
   );
 };
 
-export default LoginScreen;
+export default Login;

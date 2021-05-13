@@ -21,13 +21,13 @@ const Send = ({navigation}) => {
           (0241) 3422122
         </Text>
       </S.Content>
-      <View style={{marginBottom: 20}}>
+      <S.Footer>
         <Button
           label="Volver"
           color="white"
           onPress={() => navigation.navigate('Register')}
         />
-      </View>
+      </S.Footer>
     </Container>
   );
 };
