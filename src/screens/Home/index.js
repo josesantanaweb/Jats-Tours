@@ -1,20 +1,21 @@
 import React, {useContext} from 'react';
+import {useSelector} from 'react-redux';
 import {ThemeContext} from 'styled-components';
 import Container from '../../components/Container';
 import Cities from '../../components/Cities';
-import Button from '../../components/Button';
 import Options from '../../components/Options';
 import Dates from '../../components/Dates';
 import Passengers from '../../components/Passengers';
 import Class from '../../components/Class';
+import FlexDates from '../../components/FlexDates';
+
+import {flightClassSelector} from '../../redux/selectors/flightClass';
 
 import * as S from './styles';
 
-const Home = ({active}) => {
+const Home = () => {
+  const flightClass = useSelector(flightClassSelector);
   const {colors} = useContext(ThemeContext);
-  const onSubmit = () => {
-    console.log('submit');
-  };
   return (
     <Container>
       <S.Top>
@@ -35,10 +36,12 @@ const Home = ({active}) => {
                 borderRightColor: colors.graylight,
               }}
             />
-            <Class />
+
+            <Class flightClass={flightClass} />
           </S.BottomContent>
+          <FlexDates />
         </S.BottomInner>
-        <Button label="Enviar" onPress={onSubmit} />
+        {/* <Button label="Enviar" onPress={openModal} /> */}
       </S.Bottom>
     </Container>
   );

@@ -25,7 +25,7 @@ const Onboarding = ({navigation}) => {
         <Button
           label="Omitir"
           color="white"
-          onPress={() => navigation.navigate('Register')}
+          onPress={() => navigation.navigate('Home')}
         />
         <View
           style={{

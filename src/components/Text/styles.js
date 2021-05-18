@@ -15,11 +15,13 @@ export const Text = styled.Text`
   font-size: ${props =>
     props.size === 'small'
       ? '14px'
+      : props.size === 'normal'
+      ? '16px'
       : props.size === 'medium'
       ? '18px'
       : props.size === 'large'
       ? '24px'
       : props.size === 'xlarge'
       ? '36px'
-      : '16px'};
+      : '12px'};
 `;
