@@ -47,6 +47,7 @@ const ClassModal = ({closeModal, isModalVisible, flightClass}) => {
           <S.Option
             onPress={() => selectOption(item.id)}
             key={index}
+            last={index === 3}
             underlayColor="#FAFAFA">
             <Text
               size="normal"

@@ -1,2 +1,4 @@
 export const SET_CLASS = '@@FLIGHT/SET_CLASS';
 export const SET_FLEXDATE = '@@FLIGHT/SET_FLEXDATE';
+export const SET_FROMDATE = '@@FLIGHT/SET_FROMDATE';
+export const SET_TODATE = '@@FLIGHT/SET_TODATE';

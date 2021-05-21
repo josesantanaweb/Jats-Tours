@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {ThemeContext} from 'styled-components';
 import Container from '../../components/Container';
@@ -8,6 +8,7 @@ import Dates from '../../components/Dates';
 import Passengers from '../../components/Passengers';
 import Class from '../../components/Class';
 import FlexDates from '../../components/FlexDates';
+import Text from '../../components/Text';
 
 import {flightClassSelector} from '../../redux/selectors/flightClass';
 
@@ -40,6 +41,9 @@ const Home = () => {
             <Class flightClass={flightClass} />
           </S.BottomContent>
           <FlexDates />
+          {/* <Text size="large">{month(date)}</Text>
+          <Text size="large">{dayLabel(date)}</Text>
+          <Text size="large">{day(date)}</Text> */}
         </S.BottomInner>
         {/* <Button label="Enviar" onPress={openModal} /> */}
       </S.Bottom>
