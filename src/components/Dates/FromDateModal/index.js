@@ -4,19 +4,19 @@ import DatePicker from 'react-native-date-picker';
 import {useDispatch} from 'react-redux';
 import Modal from '../../Modal';
 
-import {fromDatesSelector} from '../../../redux/selectors/dates';
+import {fromDateSelector} from '../../../redux/selectors/dates';
 import {setFromDate} from '../../../redux/actions/dates';
 
 import * as S from './styles';
 
 const FromDateModal = ({isModalVisible, closeModal}) => {
-  const fromDates = useSelector(fromDatesSelector);
+  const fromDate = useSelector(fromDateSelector);
   const dispatch = useDispatch();
   return (
     <Modal isVisible={isModalVisible} closeModal={closeModal}>
       <S.FromDateModal>
         <DatePicker
-          date={fromDates}
+          date={fromDate}
           onDateChange={date => dispatch(setFromDate(date))}
           mode={'date'}
         />

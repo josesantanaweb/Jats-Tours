@@ -1,2 +1,2 @@
-export const fromDatesSelector = state => state.dates.fromDate;
-export const toDatesSelector = state => state.dates.toDate;
+export const fromDateSelector = state => state.dates.fromDate;
+export const toDateSelector = state => state.dates.toDate;

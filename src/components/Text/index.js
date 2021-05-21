@@ -21,7 +21,7 @@ Text.propTypes = {
   size: PropTypes.string,
   weight: PropTypes.string,
   uppercase: PropTypes.string,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 Text.defaultProps = {

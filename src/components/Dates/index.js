@@ -1,17 +1,18 @@
 import React, {useContext, useState} from 'react';
+import moment from 'moment';
 import {useSelector} from 'react-redux';
 import {ThemeContext} from 'styled-components';
 import Date from './Date';
 import FromDateModal from './FromDateModal';
 import ToDateModal from './ToDateModal';
 
-import {fromDatesSelector, toDatesSelector} from '../../redux/selectors/dates';
+import {fromDateSelector, toDateSelector} from '../../redux/selectors/dates';
 
 import * as S from './styles';
 
 const Dates = () => {
-  const fromDates = useSelector(fromDatesSelector);
-  const toDates = useSelector(toDatesSelector);
+  const fromDate = useSelector(fromDateSelector);
+  const toDate = useSelector(toDateSelector);
   const [isFromModalVisible, setFromModalVisible] = useState(false);
   const [isToModalVisible, setToModalVisible] = useState(false);
   const {colors} = useContext(ThemeContext);
@@ -23,14 +24,14 @@ const Dates = () => {
     <S.Dates>
       <Date
         onPress={openFromModal}
-        date={fromDates}
+        date={fromDate}
         label="Salida"
         style={{
           borderRightWidth: 1,
           borderRightColor: colors.graylight,
         }}
       />
-      <Date label="Vuelta" onPress={openToModal} date={toDates} />
+      <Date label="Vuelta" onPress={openToModal} date={toDate} />
       <FromDateModal
         closeModal={closeFromModal}
         isModalVisible={isFromModalVisible}

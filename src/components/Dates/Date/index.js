@@ -1,11 +1,9 @@
 import React from 'react';
+import moment from 'moment';
+import 'moment/locale/es';
+moment.locale('es');
 import Text from '../../Text';
 import {View} from 'react-native';
-import {
-  monthFormat,
-  dayLabelFormat,
-  dayFormat,
-} from '../../../utils/DateFormat';
 
 import * as S from './styles';
 
@@ -15,14 +13,14 @@ const Date = ({label, style, onPress, date}) => {
       <View>
         <Text uppercase="uppercase">{label}</Text>
         <Text size="xlarge" color="primary" weight="bold">
-          {dayFormat(date)}
+          {moment(date).format('DD')}
         </Text>
       </View>
       <View style={{marginBottom: 5}}>
         <Text size="small" color="primary" weight="bold">
-          {monthFormat(date)}.
+          {moment(date).format('MMMM')}.
         </Text>
-        <Text size="small">{dayLabelFormat(date)}</Text>
+        <Text size="small">{moment(date).format('dddd')}</Text>
       </View>
     </S.Date>
   );

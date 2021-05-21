@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 const months = [
   'Ene',
   'Feb',
@@ -34,6 +36,7 @@ export const monthFormat = date => {
     return undefined;
   }
   const monthName = months[date.getMonth()];
+  // const monthName = date.moment().format('MMMM');
   return monthName;
 };
 
