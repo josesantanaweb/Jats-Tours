@@ -11,7 +11,7 @@ export const Options = styled.View`
   overflow: hidden;
 `;
 
-export const Option = styled.View`
+export const Option = styled.TouchableOpacity`
   padding: 10px 20px;
   background-color: ${props =>
     props.active ? props.theme.colors.white : props.theme.colors.primary};
