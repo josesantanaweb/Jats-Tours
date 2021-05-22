@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const Passengers = styled.View`
+export const Passengers = styled.TouchableOpacity`
   background-color: white;
   flex: 1;
   padding: 20px;

@@ -8,7 +8,6 @@ import Dates from '../../components/Dates';
 import Passengers from '../../components/Passengers';
 import Class from '../../components/Class';
 import FlexDates from '../../components/FlexDates';
-import Text from '../../components/Text';
 
 import {flightClassSelector} from '../../redux/selectors/flightClass';
 

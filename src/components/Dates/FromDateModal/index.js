@@ -1,7 +1,6 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import DatePicker from 'react-native-date-picker';
-import {useDispatch} from 'react-redux';
 import Modal from '../../Modal';
 
 import {fromDateSelector} from '../../../redux/selectors/dates';
