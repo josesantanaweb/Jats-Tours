@@ -64054,7 +64054,7 @@
  },
  {
    "country_code": "US",
-   "region_name": "Florida",
+   "region_name": "Miami",
    "iata": "MIA",
    "icao": "KMIA",
    "airport": "Miami International Airport",
@@ -78310,7 +78310,7 @@
  },
  {
    "country_code": "VE",
-   "region_name": "Carabobo",
+   "region_name": "Maracay",
    "iata": "MYC",
    "icao": "SVBS",
    "airport": "Mariscal Sucre Airport",
@@ -78319,7 +78319,7 @@
  },
  {
    "country_code": "VE",
-   "region_name": "Vargas",
+   "region_name": "Caracas",
    "iata": "CCS",
    "icao": "SVMI",
    "airport": "Simon Bolivar International Airport",

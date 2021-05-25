@@ -4,6 +4,7 @@ import flexDates from './flexDates';
 import dates from './dates';
 import passengers from './passengers';
 import flightType from './flightType';
+import country from './country';
 
 export default combineReducers({
   flightClass,
@@ -11,4 +12,5 @@ export default combineReducers({
   flexDates,
   dates,
   passengers,
+  country,
 });

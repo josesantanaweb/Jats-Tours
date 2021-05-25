@@ -1,12 +1,13 @@
 import styled from 'styled-components/native';
 
 export const Wrapper = styled.View`
-  margin-bottom: 20px;
+  margin-bottom: ${props => (props.only ? '0px' : '20px')};
 `;
 
 export const Input = styled.TextInput`
   font-size: 16px;
-  font-family: 'Roboto-Medium';
+  background-color: white;
+  font-family: 'Roboto-Regular';
   border: 1px solid ${props => props.theme.colors.graylight};
   border-radius: 8px;
   color: ${props => props.theme.colors.primary};
