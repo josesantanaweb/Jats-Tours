@@ -38,7 +38,6 @@ const Home = () => {
   const flexDates = useSelector(flexDatesSelector);
   const oneway = useSelector(onewaySelector);
   const roundtrip = useSelector(roundtripSelector);
-  console.log(oneway);
   const toCountry = useSelector(toCountrySelector);
   const {colors} = useContext(ThemeContext);
   const sendMail = () => {
@@ -61,13 +60,17 @@ const Home = () => {
               }
               ${
                 passengers.childs > 1
-                  ? passengers.childs + ' Jovenes' + ','
+                  ? passengers.childs + ' Jóvenes' + ','
+                  : passengers.childs < 1
+                  ? ''
                   : passengers.childs + ' Joven' + ','
               }
               ${
                 passengers.infants > 1
-                  ? passengers.infants + ' Infantes'
-                  : passengers.infants + ' Infante'
+                  ? passengers.infants + ' Infantes' + ','
+                  : passengers.infants < 1
+                  ? ''
+                  : passengers.infants + ' Infante' + ','
               }
             </p>
             <p>Salida: ${moment(fromDate).format('DD')} de ${moment(
@@ -86,15 +89,12 @@ const Home = () => {
                 '</p>'
               : ' '
           }
-            <p>Clase: ${flightClass}</p>
-          <p>Con Fecha Flexible: ${flexDates ? 'Si' : 'No'}</p>
           <p>Clase: ${flightClass}</p>
+          <p>Con Fecha Flexible: ${flexDates ? 'Si' : 'No'}</p>
           `,
         isHTML: true,
       },
-      (error, event) => {
-        console.log(error);
-      },
+      error => console.log(error),
     );
   };
   return (

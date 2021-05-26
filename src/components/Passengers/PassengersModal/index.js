@@ -56,7 +56,7 @@ const PassengersModal = ({isModalVisible, closeModal}) => {
           </S.Control>
           <S.Content>
             <Text weight="bold" size="normal" color="primary">
-              {childs} {childs > 1 ? 'Jovenes' : 'Joven'}
+              {childs} {childs > 1 ? 'Jóvenes' : 'Joven'}
             </Text>
             <Text>De 2 a 12 años</Text>
           </S.Content>
