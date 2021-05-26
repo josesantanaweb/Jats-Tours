@@ -11,11 +11,11 @@ import * as S from './styles';
 const initialClasss = [
   {
     id: 1,
-    clase: 'Economica',
+    clase: 'Económica',
   },
   {
     id: 2,
-    clase: 'Economica Premium',
+    clase: 'Económica Premium',
   },
   {
     id: 3,

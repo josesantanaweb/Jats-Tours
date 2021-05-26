@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Top = styled.View`
   align-items: center;
-  flex: 2;
+  flex: 3;
   position: relative;
 `;
 
@@ -43,4 +43,9 @@ export const BottomContent = styled.View`
   flex-direction: row;
   border-bottom-width: 1px;
   border-bottom-color: ${props => props.theme.colors.graylight};
+`;
+
+export const Footer = styled.View`
+  padding: 20px;
+  height: 90px;
 `;

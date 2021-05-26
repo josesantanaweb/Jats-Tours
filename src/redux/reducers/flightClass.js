@@ -1,7 +1,7 @@
 import {SET_CLASS} from '../actions/types';
 
 const initialState = {
-  name: 'Economica',
+  name: 'Económica',
 };
 
 function classReducer(state = initialState, action) {
