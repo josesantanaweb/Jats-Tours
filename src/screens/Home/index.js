@@ -123,7 +123,7 @@ const Home = () => {
           <FlexDates />
         </S.BottomInner>
         <S.Footer>
-          <Button label="Enviar" onPress={sendMail} />
+          <Button icon label="Enviar" onPress={sendMail} />
         </S.Footer>
       </S.Bottom>
     </Container>

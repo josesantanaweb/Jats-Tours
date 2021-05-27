@@ -10,7 +10,13 @@ export const Wrapper = styled.TouchableOpacity`
   height: 50px;
   border-radius: 8px;
   align-items: center;
+  flex-direction: row;
   justify-content: center;
+`;
+
+export const Icon = styled.Image`
+  width: 25px;
+  margin-right: 10px;
 `;
 
 export const Label = styled.Text`
