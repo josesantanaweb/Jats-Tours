@@ -13,6 +13,7 @@ import Dates from '../../components/Dates';
 import Passengers from '../../components/Passengers';
 import Class from '../../components/Class';
 import FlexDates from '../../components/FlexDates';
+import Comments from '../../components/Comments';
 
 import {flightClassSelector} from '../../redux/selectors/flightClass';
 import {flexDatesSelector} from '../../redux/selectors/flexDates';
@@ -121,6 +122,7 @@ const Home = () => {
             <Class flightClass={flightClass} />
           </S.BottomContent>
           <FlexDates />
+          <Comments />
         </S.BottomInner>
         <S.Footer>
           <Button icon label="Enviar" onPress={sendMail} />

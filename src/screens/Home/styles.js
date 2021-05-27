@@ -41,6 +41,7 @@ export const BottomInner = styled.View`
 export const BottomContent = styled.View`
   justify-content: space-between;
   flex-direction: row;
+  margin-bottom: 10px;
   border-bottom-width: 1px;
   border-bottom-color: ${props => props.theme.colors.graylight};
 `;
