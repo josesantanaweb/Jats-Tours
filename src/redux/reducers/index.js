@@ -5,6 +5,7 @@ import dates from './dates';
 import passengers from './passengers';
 import flightType from './flightType';
 import country from './country';
+import comments from './comments';
 
 export default combineReducers({
   flightClass,
@@ -13,4 +14,5 @@ export default combineReducers({
   dates,
   passengers,
   country,
+  comments,
 });

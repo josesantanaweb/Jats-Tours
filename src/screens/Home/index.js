@@ -17,6 +17,7 @@ import Comments from '../../components/Comments';
 
 import {flightClassSelector} from '../../redux/selectors/flightClass';
 import {flexDatesSelector} from '../../redux/selectors/flexDates';
+import {commentsSelector} from '../../redux/selectors/comments';
 import {
   fromCountrySelector,
   toCountrySelector,
@@ -40,6 +41,7 @@ const Home = () => {
   const oneway = useSelector(onewaySelector);
   const roundtrip = useSelector(roundtripSelector);
   const toCountry = useSelector(toCountrySelector);
+  const comments = useSelector(commentsSelector);
   const {colors} = useContext(ThemeContext);
   const sendMail = () => {
     Mailer.mail(
@@ -92,6 +94,7 @@ const Home = () => {
           }
           <p>Clase: ${flightClass}</p>
           <p>Con Fecha Flexible: ${flexDates ? 'Si' : 'No'}</p>
+          <p>Comentarios: ${comments}</p>
           `,
         isHTML: true,
       },
