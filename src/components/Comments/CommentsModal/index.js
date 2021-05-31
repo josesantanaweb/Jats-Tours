@@ -13,7 +13,6 @@ import * as S from './styles';
 const CommentsModal = ({isModalVisible, closeModal}) => {
   const comments = useSelector(commentsSelector);
   const dispatch = useDispatch();
-  console.log(comments);
   return (
     <Modal
       isVisible={isModalVisible}
