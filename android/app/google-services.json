@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "925568480483",
+    "project_id": "jatstours",
+    "storage_bucket": "jatstours.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:925568480483:android:dd41b6dce5b61e7b9701d6",
+        "android_client_info": {
+          "package_name": "jatstours.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "925568480483-jfsq2jkop9b2ah07vhhe7pf6q0v13nub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJbRHKq3XQ3Fs5XXSm1vNBDL6Lf-fubHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "925568480483-jfsq2jkop9b2ah07vhhe7pf6q0v13nub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

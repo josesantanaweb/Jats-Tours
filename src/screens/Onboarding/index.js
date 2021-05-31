@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import {View} from 'react-native';
+import {AuthContext} from '../../navigation/AuthProvider';
 import Container from '../../components/Container';
 import Button from '../../components/Button';
 import Text from '../../components/Text';
@@ -7,6 +8,8 @@ import Link from '../../components/Link';
 import * as S from './styles';
 
 const Onboarding = ({navigation}) => {
+  const {logout} = useContext(AuthContext);
+
   return (
     <Container color="primary">
       <S.Content>
@@ -32,11 +35,7 @@ const Onboarding = ({navigation}) => {
             marginTop: 20,
             alignItems: 'center',
           }}>
-          <Link
-            color="white"
-            label="Registrate"
-            onPress={() => navigation.navigate('Register')}
-          />
+          <Link color="white" label="Registrate" onPress={() => logout()} />
         </View>
       </S.Footer>
     </Container>

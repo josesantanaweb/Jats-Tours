@@ -37,7 +37,7 @@ const Login = ({navigation}) => {
           <View style={{marginLeft: 10}}>
             <Link
               label="Registrate"
-              onPress={() => navigation.navigate('Send')}
+              onPress={() => navigation.navigate('Register')}
             />
           </View>
         </S.FooterText>

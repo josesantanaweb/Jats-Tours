@@ -1,9 +1,11 @@
-import React, {useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import moment from 'moment';
 import 'moment/locale/es';
 moment.locale('es');
+import firestore from '@react-native-firebase/firestore';
 import {useSelector} from 'react-redux';
 import Mailer from 'react-native-mail';
+import {AuthContext} from '../../navigation/AuthProvider';
 import {ThemeContext} from 'styled-components';
 import Container from '../../components/Container';
 import Button from '../../components/Button';
@@ -14,6 +16,7 @@ import Passengers from '../../components/Passengers';
 import Class from '../../components/Class';
 import FlexDates from '../../components/FlexDates';
 import Comments from '../../components/Comments';
+import Loading from '../../components/Loading';
 
 import {flightClassSelector} from '../../redux/selectors/flightClass';
 import {flexDatesSelector} from '../../redux/selectors/flexDates';
@@ -32,6 +35,8 @@ import {passengersSelector} from '../../redux/selectors/passengers';
 import * as S from './styles';
 
 const Home = () => {
+  const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(true);
   const flightClass = useSelector(flightClassSelector);
   const fromCountry = useSelector(fromCountrySelector);
   const fromDate = useSelector(fromDateSelector);
@@ -43,6 +48,34 @@ const Home = () => {
   const toCountry = useSelector(toCountrySelector);
   const comments = useSelector(commentsSelector);
   const {colors} = useContext(ThemeContext);
+  const {user} = useContext(AuthContext);
+
+  const getUser = async () => {
+    const currentUser = await firestore()
+      .collection('users')
+      .doc(user.uid)
+      .get()
+      .then(documentSnapshot => {
+        if (documentSnapshot.exists) {
+          setUserData(documentSnapshot.data());
+        }
+      });
+  };
+
+  useEffect(() => {
+    getUser();
+  });
+
+  useEffect(() => {
+    setTimeout(async () => {
+      setLoading(false);
+    }, 3500);
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   const sendMail = () => {
     Mailer.mail(
       {
@@ -50,6 +83,9 @@ const Home = () => {
         recipients: ['jetrix1993@gmail.com'],
         ccRecipients: ['jetrix1993@gmail.com'],
         body: `
+            <p>Nombre: ${userData.name}</p>
+            <p>Email: ${userData.email}</p>
+            <p>Telefono: ${userData.phone}</p>
             <p>Tipo de Vuelo: ${
               oneway ? 'Solo Ida' : roundtrip ? 'Ida y Vuelta' : ''
             }</p>
