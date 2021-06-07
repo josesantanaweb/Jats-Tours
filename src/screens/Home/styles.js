@@ -21,6 +21,16 @@ export const Cover = styled.Image`
   background-color: ${props => props.theme.colors.primary};
 `;
 
+export const LogoutContainer = styled.TouchableOpacity`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+`;
+
+export const Logout = styled.Image`
+  width: 20px;
+`;
+
 export const Logo = styled.Image`
   width: 117px;
   height: 40px;

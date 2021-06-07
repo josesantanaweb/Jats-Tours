@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {ThemeContext} from 'styled-components';
 import * as S from './styles';
 
@@ -8,6 +8,7 @@ const Input = ({
   placeholder,
   only,
   onChangeText,
+  secureTextEntry,
   onBlur,
   onFocus,
   ...props
@@ -17,11 +18,20 @@ const Input = ({
     <S.Wrapper only={only}>
       {label && <S.Label>{label}</S.Label>}
       <S.Input
+        ref={ref =>
+          ref &&
+          ref.props &&
+          ref.setNativeProps({
+            text: ref.props.value,
+            style: {fontFamily: 'Roboto-Regular'},
+          })
+        }
         value={value}
         onBlur={onBlur}
         onFocus={onFocus}
         onChangeText={onChangeText}
         numberOfLines={1}
+        secureTextEntry={secureTextEntry}
         placeholder={placeholder}
         placeholderTextColor={colors.gray}
         {...props}

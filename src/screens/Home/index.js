@@ -48,7 +48,7 @@ const Home = () => {
   const toCountry = useSelector(toCountrySelector);
   const comments = useSelector(commentsSelector);
   const {colors} = useContext(ThemeContext);
-  const {user} = useContext(AuthContext);
+  const {user, logout} = useContext(AuthContext);
 
   const getUser = async () => {
     const currentUser = await firestore()
@@ -141,6 +141,9 @@ const Home = () => {
     <Container>
       <S.Top>
         <S.Cover source={require('../../assets/img/cover.png')} />
+        <S.LogoutContainer onPress={() => logout()}>
+          <S.Logout source={require('../../assets/img/logout.png')} />
+        </S.LogoutContainer>
         <S.TopInner>
           <S.Logo source={require('../../assets/img/logo-white.png')} />
           <Options />

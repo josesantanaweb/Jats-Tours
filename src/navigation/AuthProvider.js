@@ -1,13 +1,40 @@
 import React, {createContext, useState} from 'react';
 import firestore from '@react-native-firebase/firestore';
 import auth from '@react-native-firebase/auth';
+import Alert from '../components/Alert';
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [errorEmail, setErrorEmail] = useState(false);
+  const [errorPassword, setErrorPassword] = useState(false);
 
+  const closeModal = () => {
+    setErrorEmail(false);
+    setErrorPassword(false);
+  };
+
+  if (errorEmail) {
+    return (
+      <Alert
+        closeModal={closeModal}
+        isModalVisible
+        message="El correo ingresado no esta registrado"
+      />
+    );
+  }
+
+  if (errorPassword) {
+    return (
+      <Alert
+        closeModal={closeModal}
+        isModalVisible
+        message="La contraseña es incorrecta"
+      />
+    );
+  }
   return (
     <AuthContext.Provider
       value={{
@@ -15,11 +42,31 @@ export const AuthProvider = ({children}) => {
         user,
         setUser,
         login: async (email, password) => {
+          setLoading(true);
           try {
-            await auth().signInWithEmailAndPassword(email, password);
+            await auth()
+              .signInWithEmailAndPassword(email, password)
+              .then(() => {
+                console.log('Login Success');
+              })
+              .catch(error => {
+                setLoading(false);
+                console.log(error);
+                switch (error.code) {
+                  case 'auth/wrong-password':
+                    setLoading(false);
+                    setErrorPassword(true);
+                    break;
+                  case 'auth/user-not-found':
+                    setLoading(false);
+                    setErrorEmail(true);
+                    break;
+                }
+              });
           } catch (e) {
-            console.log(e);
+            // console.log(e);
           }
+          setLoading(false);
         },
         register: async (name, phone, email, password) => {
           setLoading(true);

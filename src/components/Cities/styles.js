@@ -7,7 +7,9 @@ export const Cities = styled.View`
   width: 100%;
 `;
 
-export const Change = styled.Image`
+export const Change = styled.TouchableOpacity``;
+
+export const IconChange = styled.Image`
   width: 40px;
   height: 40px;
 `;

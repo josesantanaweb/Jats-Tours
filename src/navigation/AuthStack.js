@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import {View} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Register from '../screens/Register';
 import Login from '../screens/Login';
