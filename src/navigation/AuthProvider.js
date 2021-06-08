@@ -10,10 +10,14 @@ export const AuthProvider = ({children}) => {
   const [loading, setLoading] = useState(false);
   const [errorEmail, setErrorEmail] = useState(false);
   const [errorPassword, setErrorPassword] = useState(false);
+  const [errorPasswordValid, setErrorPasswordValid] = useState(false);
+  const [errorEmailValid, setErrorEmailValid] = useState(false);
 
   const closeModal = () => {
     setErrorEmail(false);
     setErrorPassword(false);
+    setErrorPasswordValid(false);
+    setErrorEmailValid(false);
   };
 
   if (errorEmail) {
@@ -32,6 +36,26 @@ export const AuthProvider = ({children}) => {
         closeModal={closeModal}
         isModalVisible
         message="La contraseña es incorrecta"
+      />
+    );
+  }
+
+  if (errorPasswordValid) {
+    return (
+      <Alert
+        closeModal={closeModal}
+        isModalVisible
+        message="La contraseña de 6 caracteres"
+      />
+    );
+  }
+
+  if (errorEmailValid) {
+    return (
+      <Alert
+        closeModal={closeModal}
+        isModalVisible
+        message="El email no tiene el formato correcto"
       />
     );
   }
@@ -60,6 +84,10 @@ export const AuthProvider = ({children}) => {
                   case 'auth/user-not-found':
                     setLoading(false);
                     setErrorEmail(true);
+                    break;
+                  case 'auth/invalid-email':
+                    setLoading(false);
+                    setErrorEmailValid(true);
                     break;
                 }
               });
@@ -91,13 +119,23 @@ export const AuthProvider = ({children}) => {
                   });
                 setLoading(false);
               })
-              //we need to catch the whole sign up process if it fails too.
               .catch(error => {
-                console.log('Something went wrong with sign up: ', error);
+                console.log(error);
+                switch (error.code) {
+                  case 'auth/weak-password':
+                    setLoading(false);
+                    setErrorPasswordValid(true);
+                    break;
+                  case 'auth/invalid-email':
+                    setLoading(false);
+                    setErrorEmailValid(true);
+                    break;
+                }
               });
           } catch (e) {
             console.log(e);
           }
+          setLoading(false);
         },
         logout: async () => {
           try {

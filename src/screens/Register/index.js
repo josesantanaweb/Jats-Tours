@@ -35,22 +35,20 @@ const Register = ({navigation}) => {
         </S.Top>
         <Input
           onChangeText={userName => setName(userName)}
-          placeholder="Ingrese nombre y apellido"
           label="Nombre y Apellido"
         />
         <Input
           onChangeText={userEmail => setEmail(userEmail)}
-          placeholder="Ingrese correo electronico"
           label="Correo Electronico"
         />
         <Input
-          placeholder="Ingrese su numero telefono"
           label="Telefono"
+          keyboardType="numeric"
           onChangeText={userPhone => setPhone(userPhone)}
         />
         <Input
-          placeholder="Ingrese su numero contraseña"
           label="Contraseña"
+          secureTextEntry
           onChangeText={userPassword => setPassword(userPassword)}
         />
       </S.Content>

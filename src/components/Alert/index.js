@@ -15,7 +15,7 @@ const Alert = ({closeModal, message}) => {
           </Text>
         </S.AlertTitle>
         <S.AlertDescription>
-          <Text size="normal">{message}</Text>
+          <S.AlertType size="normal">{message}</S.AlertType>
         </S.AlertDescription>
         <Button label="Cerrar" onPress={closeModal} />
       </S.Alert>

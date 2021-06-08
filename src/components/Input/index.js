@@ -9,6 +9,7 @@ const Input = ({
   only,
   onChangeText,
   secureTextEntry,
+  keyboardType,
   onBlur,
   onFocus,
   ...props
@@ -21,6 +22,7 @@ const Input = ({
         value={value}
         onBlur={onBlur}
         onFocus={onFocus}
+        keyboardType={keyboardType}
         onChangeText={onChangeText}
         numberOfLines={1}
         secureTextEntry={secureTextEntry}

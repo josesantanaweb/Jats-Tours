@@ -24,6 +24,11 @@ export const AlertTitle = styled.View`
   margin-bottom: 20px;
 `;
 
+export const AlertType = styled.Text`
+  color: ${props => props.theme.colors.gray};
+  font-size: 16px;
+`;
+
 export const AlertDescription = styled.View`
   align-items: center;
   margin-bottom: 20px;
