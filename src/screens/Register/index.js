@@ -11,10 +11,10 @@ import Loading from '../../components/Loading';
 import * as S from './styles';
 
 const Register = ({navigation}) => {
-  const [email, setEmail] = useState();
-  const [phone, setPhone] = useState();
-  const [name, setName] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
 
   const {register, loading} = useContext(AuthContext);
 
@@ -57,6 +57,11 @@ const Register = ({navigation}) => {
       <S.Footer>
         <Button
           label="Registro"
+          disabled={
+            name === '' || email === '' || password === '' || phone === ''
+              ? true
+              : false
+          }
           color="primary"
           onPress={() => register(name, phone, email, password)}
         />

@@ -10,12 +10,12 @@ const Alert = ({closeModal, message}) => {
       <S.Alert>
         <S.AlertTitle>
           <S.AlertIcon source={require('../../assets/img/error.png')} />
-          <Text weight="bold" size="large" color="primary">
+          <Text weight="bold" size="medium" color="primary">
             Hubo un Error
           </Text>
         </S.AlertTitle>
         <S.AlertDescription>
-          <Text size="medium">{message}</Text>
+          <Text size="normal">{message}</Text>
         </S.AlertDescription>
         <Button label="Cerrar" onPress={closeModal} />
       </S.Alert>

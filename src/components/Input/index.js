@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import {ThemeContext} from 'styled-components';
 import * as S from './styles';
 
@@ -18,14 +18,6 @@ const Input = ({
     <S.Wrapper only={only}>
       {label && <S.Label>{label}</S.Label>}
       <S.Input
-        ref={ref =>
-          ref &&
-          ref.props &&
-          ref.setNativeProps({
-            text: ref.props.value,
-            style: {fontFamily: 'Roboto-Regular'},
-          })
-        }
         value={value}
         onBlur={onBlur}
         onFocus={onFocus}

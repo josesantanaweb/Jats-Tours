@@ -11,8 +11,8 @@ import Loading from '../../components/Loading';
 import * as S from './styles';
 
 const Login = ({navigation}) => {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const {login, loading} = useContext(AuthContext);
 
@@ -27,17 +27,15 @@ const Login = ({navigation}) => {
           <S.Logo source={require('../../assets/img/logo.png')} />
         </S.Header>
         <S.Top>
-          <Text size="medium" weight="bold">
+          <Text size="medium" weight="bold" color="primary">
             Inicia Sesión
           </Text>
         </S.Top>
         <Input
           onChangeText={userEmail => setEmail(userEmail)}
-          placeholder="Ingrese correo electronico"
           label="Correo Electronico"
         />
         <Input
-          placeholder="Ingrese su numero contraseña"
           label="Contraseña"
           secureTextEntry
           onChangeText={userPassword => setPassword(userPassword)}
@@ -47,6 +45,7 @@ const Login = ({navigation}) => {
         <Button
           label="Inicia Sesion"
           color="primary"
+          disabled={email === '' || password === '' ? true : false}
           onPress={() => login(email, password)}
         />
         <S.FooterText>

@@ -3,7 +3,6 @@ import {View} from 'react-native';
 import Container from '../../components/Container';
 import Button from '../../components/Button';
 import Text from '../../components/Text';
-import Link from '../../components/Link';
 import * as S from './styles';
 
 const Onboarding = ({navigation}) => {
@@ -27,18 +26,6 @@ const Onboarding = ({navigation}) => {
           color="white"
           onPress={() => navigation.navigate('Home')}
         />
-        <View
-          style={{
-            marginTop: 20,
-            alignItems: 'center',
-          }}>
-          <Link
-            color="white"
-            label="Registrate"
-            olor="white"
-            onPress={() => navigation.navigate('Register')}
-          />
-        </View>
       </S.Footer>
     </Container>
   );

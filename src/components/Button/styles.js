@@ -9,6 +9,7 @@ export const Wrapper = styled.TouchableOpacity`
       : props.theme.colors.secondary};
   height: 50px;
   border-radius: 8px;
+  opacity: ${props => (props.disabled ? 0.6 : 1)};
   align-items: center;
   flex-direction: row;
   justify-content: center;
