@@ -29,7 +29,7 @@ const Register = ({navigation}) => {
           <S.Logo source={require('../../assets/img/logo.png')} />
         </S.Header>
         <S.Top>
-          <Text size="medium" weight="bold">
+          <Text size="medium" weight="bold" color="primary">
             Registro
           </Text>
         </S.Top>

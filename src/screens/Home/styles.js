@@ -2,8 +2,14 @@ import styled from 'styled-components/native';
 
 export const Top = styled.View`
   align-items: center;
-  flex: 3;
+  flex: 0.8;
   position: relative;
+`;
+
+export const Bottom = styled.View`
+  background-color: ${props => props.theme.colors.white};
+  flex: 1.1;
+  justify-content: space-between;
 `;
 
 export const TopInner = styled.View`
@@ -37,12 +43,6 @@ export const Logo = styled.Image`
   margin-bottom: 20px;
 `;
 
-export const Bottom = styled.View`
-  background-color: ${props => props.theme.colors.white};
-  flex: 1;
-  justify-content: space-between;
-`;
-
 export const BottomInner = styled.View`
   justify-content: space-between;
   align-items: flex-start;
@@ -58,5 +58,4 @@ export const BottomContent = styled.View`
 
 export const Footer = styled.View`
   padding: 20px;
-  height: 90px;
 `;
