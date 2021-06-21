@@ -18118,7 +18118,7 @@
  },
  {
    "country_code": "CL",
-   "region_name": "Region Metropolitana de Santiago",
+   "region_name": "Santiago",
    "iata": "SCL",
    "icao": "SCEL",
    "airport": "Comodoro Arturo Merino Benitez International Airport",
@@ -23455,7 +23455,7 @@
  },
  {
    "country_code": "DE",
-   "region_name": "Hessen",
+   "region_name": "Francfort",
    "iata": "FRA",
    "icao": "EDDF",
    "airport": "Frankfurt Airport",
@@ -24049,7 +24049,7 @@
  },
  {
    "country_code": "DO",
-   "region_name": "Monte Plata",
+   "region_name": "Santo Domingo",
    "iata": "SDQ",
    "icao": "MDSD",
    "airport": "Las Americas International Airport",
@@ -24067,7 +24067,7 @@
  },
  {
    "country_code": "DO",
-   "region_name": "La Altagracia",
+   "region_name": "Punta Cana",
    "iata": "PUJ",
    "icao": "MDPC",
    "airport": "Punta Cana International Airport",
@@ -24088,7 +24088,7 @@
    "region_name": "Distrito Nacional (Santo Domingo)",
    "iata": "JBQ",
    "icao": "MDJB",
-   "airport": "La Isabela International Airport (Dr. Joaquin Balaguer Int'l)",
+   "airport": "La Isabela International Airport",
    "latitude": 18.57250023,
    "longitude": -69.98560333
  },
@@ -25111,7 +25111,7 @@
  },
  {
    "country_code": "ES",
-   "region_name": "Madrid, Comunidad de",
+   "region_name": "Madrid",
    "iata": "MAD",
    "icao": "LEMD",
    "airport": "Adolfo Suarez Madrid-Barajas Airport",
@@ -32868,6 +32868,15 @@
    "longitude": 106.7649994
  },
  {
+   "country_code": "VL",
+   "region_name": "Puerto Cabello",
+   "iata": "PBL",
+   "icao": "WIHP",
+   "airport": "General Bartolomé Salom Airport",
+   "latitude": -6.336959839,
+   "longitude": 106.7649994
+ },
+ {
    "country_code": "ID",
    "region_name": "Nusa Tenggara Timur",
    "iata": "KOE",
@@ -36397,7 +36406,7 @@
  },
  {
    "country_code": "IT",
-   "region_name": "Lazio",
+   "region_name": "Roma",
    "iata": "FCO",
    "icao": "LIRF",
    "airport": "Leonardo da Vinci-Fiumicino Airport",
@@ -46981,7 +46990,7 @@
  },
  {
    "country_code": "PE",
-   "region_name": "El Callao",
+   "region_name": "Lima",
    "iata": "LIM",
    "icao": "SPIM",
    "airport": "Jorge Chavez International Airport",
@@ -58528,7 +58537,7 @@
  },
  {
    "country_code": "TR",
-   "region_name": "Istanbul",
+   "region_name": "Estambul",
    "iata": "IST",
    "icao": "LTBA",
    "airport": "Istanbul Ataturk Airport",
@@ -64495,7 +64504,7 @@
  },
  {
    "country_code": "US",
-   "region_name": "Florida",
+   "region_name": "Orlando",
    "iata": "MCO",
    "icao": "KMCO",
    "airport": "Orlando International Airport",
@@ -65224,7 +65233,7 @@
  },
  {
    "country_code": "US",
-   "region_name": "New Jersey",
+   "region_name": "New York",
    "iata": "EWR",
    "icao": "KEWR",
    "airport": "Newark Liberty International Airport",
@@ -78364,7 +78373,7 @@
  },
  {
    "country_code": "VE",
-   "region_name": "Zulia",
+   "region_name": "Maracaibo",
    "iata": "MAR",
    "icao": "SVMC",
    "airport": "La Chinita International Airport",
@@ -78382,7 +78391,7 @@
  },
  {
    "country_code": "VE",
-   "region_name": "Nueva Esparta",
+   "region_name": "Porlamar",
    "iata": "PMV",
    "icao": "SVMG",
    "airport": "Santiago Marino Caribbean International Airport",
@@ -78562,7 +78571,7 @@
  },
  {
    "country_code": "VE",
-   "region_name": "Carabobo",
+   "region_name": "Valencia",
    "iata": "VLN",
    "icao": "SVVA",
    "airport": "Arturo Michelena International Airport",
@@ -78796,7 +78805,7 @@
  },
  {
    "country_code": "VE",
-   "region_name": "Bolivar",
+   "region_name": "Puerto Ordaz",
    "iata": "PZO",
    "icao": "SVPR",
    "airport": "Manuel Carlos Piar Guayana Airport",

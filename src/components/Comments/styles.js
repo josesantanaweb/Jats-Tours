@@ -7,6 +7,7 @@ export const Comments = styled.TouchableOpacity`
 `;
 
 export const Icon = styled.Image`
-  width: 20px;
+  width: 24px;
+  height: 24px;
   margin-right: 10px;
 `;

@@ -13,6 +13,7 @@ const PassengersModal = ({isModalVisible, closeModal}) => {
   const [adults, setAdults] = useState(1);
   const [childs, setChilds] = useState(0);
   const [infants, setInfants] = useState(0);
+  const [total, setTotal] = useState(0);
   const dispatch = useDispatch();
 
   const addAdult = () => setAdults(adults + 1);
@@ -24,6 +25,7 @@ const PassengersModal = ({isModalVisible, closeModal}) => {
 
   React.useEffect(() => {
     dispatch(setPassengers({adults, childs, infants}));
+    setTotal(adults + childs + infants);
   }, [adults, childs, dispatch, infants]);
 
   return (
@@ -45,7 +47,7 @@ const PassengersModal = ({isModalVisible, closeModal}) => {
             </Text>
             <Text>Por encima de los 12 años</Text>
           </S.Content>
-          <S.Control onPress={addAdult}>
+          <S.Control onPress={addAdult} disabled={total > 7}>
             <S.Icon source={require('../../../assets/img/add.png')} />
           </S.Control>
         </S.Row>
@@ -60,7 +62,7 @@ const PassengersModal = ({isModalVisible, closeModal}) => {
             </Text>
             <Text>De 2 a 12 años</Text>
           </S.Content>
-          <S.Control onPress={addChild}>
+          <S.Control onPress={addChild} disabled={total > 7}>
             <S.Icon source={require('../../../assets/img/add.png')} />
           </S.Control>
         </S.Row>
@@ -74,7 +76,7 @@ const PassengersModal = ({isModalVisible, closeModal}) => {
             </Text>
             <Text>Por debajo de los 2 años</Text>
           </S.Content>
-          <S.Control onPress={addInfant}>
+          <S.Control onPress={addInfant} disabled={total > 7}>
             <S.Icon source={require('../../../assets/img/add.png')} />
           </S.Control>
         </S.Row>

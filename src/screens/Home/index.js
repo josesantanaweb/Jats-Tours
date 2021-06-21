@@ -32,6 +32,8 @@ import {
 } from '../../redux/selectors/flightType';
 import {passengersSelector} from '../../redux/selectors/passengers';
 
+import {Linking} from 'react-native';
+
 import * as S from './styles';
 
 const Home = () => {
@@ -75,6 +77,58 @@ const Home = () => {
   if (loading) {
     return <Loading />;
   }
+
+  const sendWhatsapp = () => {
+    let url = `whatsapp://send?text=
+Solicitud de Cotización
+Nombre: ${userData.name}
+Email: ${userData.email}
+Telefono: ${userData.phone}
+Tipo de Vuelo: ${oneway ? 'Solo Ida' : roundtrip ? 'Ida y Vuelta' : ''}
+Desde: ${fromCountry.region_name}
+Hasta: ${toCountry.region_name}
+Pasajeros: ${
+      passengers.adults > 1
+        ? passengers.adults + ' Adultos' + ','
+        : passengers.adults + ' Adulto' + ','
+    }${
+      passengers.childs > 1
+        ? passengers.childs + ' Jóvenes' + ','
+        : passengers.childs < 1
+        ? ''
+        : passengers.childs + ' Joven' + ','
+    }${
+      passengers.infants > 1
+        ? passengers.infants + ' Infantes' + ','
+        : passengers.infants < 1
+        ? ''
+        : passengers.infants + ' Infante' + ','
+    }
+Salida: ${moment(fromDate).format('DD')} de ${moment(fromDate).format(
+      'MMMM',
+    )} del ${moment(fromDate).format('YYYY')}
+${
+  roundtrip
+    ? 'Vuelta: ' +
+      moment(toDate).format('DD') +
+      ' de ' +
+      moment(toDate).format('MMMM') +
+      ' del ' +
+      moment(fromDate).format('YYYY')
+    : ' '
+}
+Clase: ${flightClass}
+Con Fecha Flexible: ${flexDates ? 'Si' : 'No'}
+Comentarios: ${comments}
+    &phone=58 + 4144792306;`;
+    Linking.openURL(url)
+      .then(data => {
+        console.log('WhatsApp Opened successfully ' + data);
+      })
+      .catch(() => {
+        console.log('Make sure WhatsApp installed on your device');
+      });
+  };
 
   const sendMail = () => {
     Mailer.mail(
@@ -165,9 +219,13 @@ const Home = () => {
           </S.BottomContent>
           <FlexDates />
           <Comments />
+          <S.Whatsapp onPress={sendWhatsapp}>
+            <S.WhatsappIcon source={require('../../assets/img/whatsapp.png')} />
+            <S.WhatsappText color="red">Enviar por Whatsapp</S.WhatsappText>
+          </S.Whatsapp>
         </S.BottomInner>
         <S.Footer>
-          <Button icon label="Enviar" onPress={sendMail} />
+          <Button icon label="Enviar por Gmail" onPress={sendMail} />
         </S.Footer>
       </S.Bottom>
     </Container>

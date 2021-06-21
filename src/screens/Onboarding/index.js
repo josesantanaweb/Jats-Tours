@@ -90,7 +90,7 @@ const Onboarding = ({navigation}) => {
               key={i}
               style={{
                 backgroundColor:
-                  i == currentPage ? colors.primary : colors.graylight,
+                  i == currentPage ? colors.primary : colors.gray,
               }}
             />
           ))}

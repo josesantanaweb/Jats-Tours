@@ -17,6 +17,7 @@ export const Wrapper = styled.TouchableOpacity`
 
 export const Icon = styled.Image`
   width: 25px;
+  height: 25px;
   margin-right: 10px;
 `;
 

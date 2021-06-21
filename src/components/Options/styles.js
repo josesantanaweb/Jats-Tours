@@ -14,11 +14,11 @@ export const Options = styled.View`
 export const Option = styled.TouchableOpacity`
   padding: 10px 20px;
   background-color: ${props =>
-    props.active ? props.theme.colors.white : props.theme.colors.primary};
+    props.active ? props.theme.colors.primary : props.theme.colors.white};
 `;
 
 export const OptionText = styled.Text`
   color: ${props =>
-    props.active ? props.theme.colors.primary : props.theme.colors.white};
+    props.active ? props.theme.colors.white : props.theme.colors.primary};
   font-size: 14px;
 `;

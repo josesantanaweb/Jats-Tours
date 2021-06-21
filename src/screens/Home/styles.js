@@ -35,6 +35,7 @@ export const LogoutContainer = styled.TouchableOpacity`
 
 export const Logout = styled.Image`
   width: 20px;
+  height: 20px;
 `;
 
 export const Logo = styled.Image`
@@ -58,4 +59,20 @@ export const BottomContent = styled.View`
 
 export const Footer = styled.View`
   padding: 20px;
+`;
+
+export const Whatsapp = styled.TouchableOpacity`
+  padding: 10px 20px;
+  flex-direction: row;
+`;
+
+export const WhatsappIcon = styled.Image`
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+`;
+
+export const WhatsappText = styled.Text`
+  color: #4caf50;
+  font-size: 16px;
 `;
