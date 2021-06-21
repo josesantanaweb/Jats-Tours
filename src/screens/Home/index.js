@@ -120,7 +120,7 @@ ${
 Clase: ${flightClass}
 Con Fecha Flexible: ${flexDates ? 'Si' : 'No'}
 Comentarios: ${comments}
-    &phone=58 + 4144792306;`;
+    &phone=58 + 4244312121;`;
     Linking.openURL(url)
       .then(data => {
         console.log('WhatsApp Opened successfully ' + data);
@@ -134,8 +134,8 @@ Comentarios: ${comments}
     Mailer.mail(
       {
         subject: 'Solicitud de Cotización',
-        recipients: ['jetrix1993@gmail.com'],
-        ccRecipients: ['jetrix1993@gmail.com'],
+        recipients: ['jatstravelservices@gmail.com'],
+        ccRecipients: ['jatstravelservices@gmail.com'],
         body: `
             <p>Nombre: ${userData.name}</p>
             <p>Email: ${userData.email}</p>
