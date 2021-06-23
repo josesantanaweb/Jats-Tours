@@ -73,6 +73,6 @@ export const WhatsappIcon = styled.Image`
 `;
 
 export const WhatsappText = styled.Text`
-  color: #4caf50;
+  color: ${props => props.theme.colors.gray};
   font-size: 16px;
 `;

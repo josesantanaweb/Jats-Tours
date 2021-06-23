@@ -5,7 +5,7 @@ import {Wrapper, Label, Icon} from './styles';
 const Button = ({label, color, disabled, onPress, icon, ...props}) => {
   return (
     <Wrapper onPress={onPress} color={color} disabled={disabled} {...props}>
-      {icon && <Icon source={require('../../assets/img/google-plus.png')} />}
+      {/* {icon && <Icon source={require('../../assets/img/whatsapp.png')} />} */}
       <Label color={color}>{label}</Label>
     </Wrapper>
   );

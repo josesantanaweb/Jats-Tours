@@ -219,13 +219,15 @@ Comentarios: ${comments}
           </S.BottomContent>
           <FlexDates />
           <Comments />
-          <S.Whatsapp onPress={sendWhatsapp}>
-            <S.WhatsappIcon source={require('../../assets/img/whatsapp.png')} />
-            <S.WhatsappText color="red">Enviar por Whatsapp</S.WhatsappText>
+          <S.Whatsapp onPress={sendMail}>
+            <S.WhatsappIcon
+              source={require('../../assets/img/google-plus.png')}
+            />
+            <S.WhatsappText>Enviar por Gmail</S.WhatsappText>
           </S.Whatsapp>
         </S.BottomInner>
         <S.Footer>
-          <Button icon label="Enviar por Gmail" onPress={sendMail} />
+          <Button label="Enviar por Whatsapp" onPress={sendWhatsapp} />
         </S.Footer>
       </S.Bottom>
     </Container>
